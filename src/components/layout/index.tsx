@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { css } from '@emotion/core';
+import React, { useState } from "react";
+import { css } from "@emotion/core";
 import {
   PageContainerStyle,
   HeaderBackground,
@@ -13,10 +13,14 @@ import {
   CopyrightWrapper,
   CopyrightSpan,
   getMainLayoutWrapper,
-} from './style';
-import HamburgerMenu from 'src/components/hamburgermenu';
+} from "./style";
+import HamburgerMenu from "src/components/hamburgermenu";
 
-const navLinks = [{ text: 'Contact Us', key: 'nav_contact', route: '/contact' }];
+const navLinks = [
+  { text: "Site", key: "nav_contact", route: "/site" },
+  { text: "Contact", key: "nav_contact", route: "/contact" },
+  { text: "About", key: "nav_contact", route: "/about" },
+];
 
 interface LayoutProps {
   title: string;
@@ -24,7 +28,11 @@ interface LayoutProps {
   children: any;
 }
 
-export default function Layout({ copyrightName, title, children }: LayoutProps) {
+export default function Layout({
+  copyrightName,
+  title,
+  children,
+}: LayoutProps) {
   const [menuOpen, setMenu] = useState(false);
   const MainLayoutWrapper = getMainLayoutWrapper(menuOpen);
   return (
@@ -41,7 +49,11 @@ export default function Layout({ copyrightName, title, children }: LayoutProps) 
               </NavContent>
             ))}
           </NavWrapper>
-          <HamburgerMenu menuOpen={menuOpen} setMenu={setMenu} navLinks={navLinks} />
+          <HamburgerMenu
+            menuOpen={menuOpen}
+            setMenu={setMenu}
+            navLinks={navLinks}
+          />
         </HeaderWrapper>
       </HeaderBackground>
       <ContentWrapper>
