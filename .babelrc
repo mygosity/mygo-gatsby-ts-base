@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+      "@emotion/babel-preset-css-prop",
+      {
+        "autoLabel": true,
+        "labelFormat": "[local]"
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "emotion",
+      {
+        "autoLabel": true,
+        "labelFormat": "[local]"
+      }
+    ],
+    "@babel/plugin-proposal-class-properties"
+  ]
+}
