@@ -24,15 +24,10 @@ const navLinks = [
 
 interface LayoutProps {
   title: string;
-  copyrightName: string;
   children: any;
 }
 
-export default function Layout({
-  copyrightName,
-  title,
-  children,
-}: LayoutProps) {
+export default function Layout({ title, children }: LayoutProps) {
   const [menuOpen, setMenu] = useState(false);
   const MainLayoutWrapper = getMainLayoutWrapper(menuOpen);
   return (
@@ -62,7 +57,7 @@ export default function Layout({
       <FooterWrapper>
         <CopyrightWrapper>
           <CopyrightSpan>
-            Copyright © {new Date().getFullYear()} {copyrightName}
+            Copyright © {new Date().getFullYear()} {title}
           </CopyrightSpan>
         </CopyrightWrapper>
       </FooterWrapper>

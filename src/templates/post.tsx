@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Layout from 'src/components/layout';
-import SEO from 'src/components/seo';
-import { rhythm, scale } from 'src/utils/typography';
-import { TemplateData } from 'src/types';
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "src/components/layout";
+import SEO from "src/components/seo";
+import { rhythm, scale } from "src/utils/typography";
+import { TemplateData } from "src/types";
 
 class PostTemplate extends React.Component<TemplateData> {
   render() {
@@ -11,7 +11,7 @@ class PostTemplate extends React.Component<TemplateData> {
     const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
     return (
-      <Layout title={siteTitle} siteName={siteTitle}>
+      <Layout title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
         <p

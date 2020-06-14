@@ -9,12 +9,12 @@ interface Props {
   location: any;
 }
 
-class MainIndex extends React.Component<Props> {
+class AboutPage extends React.Component<Props> {
   render() {
     const siteMetadata = this.props.data.site.siteMetadata;
     const siteTitle = siteMetadata.title;
     return (
-      <Layout title={siteTitle} copyrightName={siteTitle}>
+      <Layout title={siteTitle}>
         <SEO
           title="About"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -25,7 +25,7 @@ class MainIndex extends React.Component<Props> {
   }
 }
 
-export default MainIndex;
+export default AboutPage;
 
 export const pageQuery = graphql`
   query {
